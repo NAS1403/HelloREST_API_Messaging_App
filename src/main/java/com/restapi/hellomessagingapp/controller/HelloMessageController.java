@@ -18,7 +18,7 @@ public class HelloMessageController
 
    /**
     * UC2 Make REST Call to show Hello Mark from BridgeLabz
-    * curl http://localhost:8080/home/query?Fname=Abhishek&Lname=Sagar
+    * curl http://localhost:8080/home/query?fName=Abhishek&lName=Sagar
     */
     @RequestMapping(value = {"/query"}, method = RequestMethod.GET)
     public String sayHello(@RequestParam(value = "fName") String fName,@RequestParam(value = "lName") String lName)
@@ -27,7 +27,7 @@ public class HelloMessageController
     }
     /**
      * UC3 Make REST Call to show Hello Mark from BridgeLabz
-     * curl http://localhost:8080/hello/param/Abhishek
+     * curl http://localhost:8080/home/param/Abhishek
      */
     @GetMapping("/param/{name}")
     public String sayHelloParam(@PathVariable String name)
@@ -48,7 +48,7 @@ public class HelloMessageController
 
     /**
      * UC5 Make REST Call to show Hello Mark Taylor from BridgeLabz
-     * localhost:8080/hello/put/Mark/?lastName=Taylor
+     * http://localhost:8080/home/put/Mark/?lastName=Taylor
      */
     @PutMapping("/put/{firstName}")
     public String sayHelloPut(@PathVariable String firstName, @RequestParam(value = "lastName") String lastName) {
